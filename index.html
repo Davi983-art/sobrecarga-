@@ -208,7 +208,7 @@ const KB0={a:'l',arrowleft:'l',d:'r',arrowright:'r',w:'j',arrowup:'j',' ':'j',s:
 const KB1={a:[0,'l'],d:[0,'r'],w:[0,'j'],s:[0,'m'],f:[0,'s'],arrowleft:[1,'l'],arrowright:[1,'r'],arrowup:[1,'j'],arrowdown:[1,'m']};
 function bind(e){const k=(e.key||'').toLowerCase();
   if(MODE===0){const a=KB0[k];return a?[0,a]:null}
-  if(e.code==='Numpad5'||e.code==='Digit5')return [1,'s'];
+  if(e.code==='Numpad5')return [1,'s'];
   return KB1[k]||null}
 const DTAP=280;
 addEventListener('keydown',e=>{const b=bind(e);if(!b)return;e.preventDefault();if(e.repeat)return;
